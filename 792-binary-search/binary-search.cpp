@@ -3,7 +3,7 @@ public:
     int search(vector<int>& arr, int target) {
         int n=arr.size();
         int lo=0,hi=n-1;
-        
+        //b
        
         while(lo<=hi){
              int mid=(lo+hi)/2;
