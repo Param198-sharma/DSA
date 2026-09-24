@@ -8,20 +8,40 @@
  *     ListNode(int x, ListNode *next) : val(x), next(next) {}
  * };
  */
+
+ //METHOD 2 SLOW FAST APPROACH
 class Solution {
 public:
-    ListNode* middleNode(ListNode* head) {
-        int length=0;
-        ListNode* temp=head;
-        for(int i=0;temp!=NULL;i++){
-            temp=temp->next;
-            length++;
-        }
-        temp=head;
-        for(int i=0;i<length/2;i++){
-            temp=temp->next;
-        }
-    return temp;
-        
-    }
+ListNode* middleNode(ListNode* head) {
+ListNode* slow=head;
+ListNode* fast=head;
+while(fast!=NULL && fast->next!=NULL){
+    slow=slow->next;
+    fast=fast->next->next;
+    
+}
+return slow;
+
+
+
+
+
+
+
+}
 };
+    // ListNode* middleNode(ListNode* head) {
+    //     int length=0;
+    //     ListNode* temp=head;
+    //     for(int i=0;temp!=NULL;i++){
+    //         temp=temp->next;
+    //         length++;
+    //     }
+    //     temp=head;
+    //     for(int i=0;i<length/2;i++){
+    //         temp=temp->next;
+    //     }
+    // return temp;
+   // METHOD2 SLOW FAST APPROACH
+        
+    
